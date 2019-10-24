@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dip_60"
+    android:layout_marginLeft="@dimen/dip_10"
+    android:layout_marginTop="@dimen/dip_5"
+    android:layout_marginRight="@dimen/dip_10"
+    android:layout_marginBottom="@dimen/dip_5"
+    android:background="@drawable/oder_paidui_bg">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/item_oder_icon"
+            android:layout_width="@dimen/dip_30"
+            android:layout_height="@dimen/dip_30"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dip_10"
+            android:src="@mipmap/yixiafang" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dip_10"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="恒泰科技"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fond_16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip_10"
+                android:text="10-13 15:32:29"
+                android:textColor="@color/white"
+                android:textSize="@dimen/fond_12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dip_10"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dip_10"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥500.00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fond_16sp" />
+
+        <TextView
+            android:id="@+id/item_oder_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dip_10"
+            android:text="已下放"
+            android:textColor="@color/white"
+            android:textSize="@dimen/fond_12sp" />
+    </LinearLayout>
+</RelativeLayout>

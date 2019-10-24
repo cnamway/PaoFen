@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/beijing"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dip_30"
+        android:padding="@dimen/dip_10">
+
+        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="@dimen/dip_40"
+            android:layout_height="@dimen/dip_40"
+            android:src="@mipmap/yonghu"
+            app:civ_border_color="#FF000000" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dip_35"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/dip_20"
+            android:background="@drawable/oder_secher_bg"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/dip_10"
+                android:src="@mipmap/sousuo" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@null"
+                android:hint="输入订单编号"
+                android:paddingLeft="@dimen/dip_10"
+                android:textColor="#a7aaac"
+                android:textColorHint="#a7aaac"
+                android:textSize="@dimen/fond_14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dip_80"
+        android:layout_marginLeft="@dimen/dip_10"
+        android:layout_marginTop="@dimen/dip_10"
+        android:layout_marginRight="@dimen/dip_10"
+        android:background="@drawable/oder_paidui_bg">
+
+        <LinearLayout
+            android:id="@+id/loding_view_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dip_10"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="恒泰科技"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dip_10"
+                android:text="42174号收款码"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/bt_paidui"
+            android:layout_width="@dimen/dip_80"
+            android:layout_height="@dimen/dip_30"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dip_10"
+            android:background="@drawable/oder_tv_bg"
+            android:gravity="center"
+            android:text="开始排队"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/view_paiduiloding"
+            android:layout_width="@dimen/dip_120"
+            android:layout_height="@dimen/dip_40"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/oder_ll_bg_left"
+            android:orientation="horizontal"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/pb_load"
+                android:layout_width="@dimen/dip_30"
+                android:layout_height="@dimen/dip_30"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="@dimen/dip_5"
+                android:indeterminateTint="@color/white" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dip_15"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="等待排位"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fond_14sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="230"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/fond_12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dip_10"
+        android:paddingLeft="@dimen/dip_10"
+        android:text="订单记录"
+        android:textColor="@color/white" />
+
+    <View
+        android:layout_width="@dimen/dip_55"
+        android:layout_height="@dimen/dip_2"
+        android:layout_marginLeft="@dimen/dip_10"
+        android:layout_marginTop="@dimen/dip_3"
+        android:background="#ffbb00" />
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/myOderRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+</LinearLayout>
